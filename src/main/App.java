@@ -26,6 +26,21 @@ public class App {
     }
 
     public static Integer parMaisProximo(Integer[][] pares){
-        return 1;
+        int menorDistancia = Integer.MAX_VALUE;
+        Integer[] parMaisProximo = null;
+        for (int i = 0; i < pares.length; i++){
+            for (int j = i+1; j < pares.length; j++){
+                int distancia = distancia(pares[i], pares[j]);
+                if (distancia < menorDistancia){
+                    menorDistancia = distancia;
+                    parMaisProximo = new Integer[]{i, j};
+                }
+            }
+        }
+        return menorDistancia;
+    }
+
+    public static Integer distancia(Integer[] par1, Integer[] par2){
+        return (int) (Math.pow((Math.pow((par1[0] - par2[0]),2) + Math.pow((par1[1] - par2[1]), 2)), 0.5)); 
     }
 }
