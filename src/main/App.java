@@ -25,11 +25,11 @@ public class App {
         return maior;
     }
 
-    public static Integer parMaisProximo(Integer[][] pares){
-        int menorDistancia = Integer.MAX_VALUE;
+    public static float parMaisProximo(Integer[][] pares){
+        float menorDistancia = Float.MAX_VALUE;
         for (int i = 0; i < pares.length; i++){
             for (int j = i+1; j < pares.length; j++){
-                int distancia = distancia(pares[i], pares[j]);
+                float distancia = distancia(pares[i], pares[j]);
                 if (distancia < menorDistancia){
                     menorDistancia = distancia;
                 }
@@ -38,7 +38,7 @@ public class App {
         return menorDistancia;
     }
 
-    public static Integer distancia(Integer[] par1, Integer[] par2){
-        return (int) (Math.pow((Math.pow((par1[0] - par2[0]),2) + Math.pow((par1[1] - par2[1]), 2)), 0.5)); 
+    public static float distancia(Integer[] par1, Integer[] par2){
+        return (float) (Math.pow((Math.pow((par1[0] - par2[0]),2) + Math.pow((par1[1] - par2[1]), 2)), 0.5)); 
     }
 }
