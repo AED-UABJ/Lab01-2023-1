@@ -27,13 +27,11 @@ public class App {
 
     public static Integer parMaisProximo(Integer[][] pares){
         int menorDistancia = Integer.MAX_VALUE;
-        Integer[] parMaisProximo = null;
         for (int i = 0; i < pares.length; i++){
             for (int j = i+1; j < pares.length; j++){
                 int distancia = distancia(pares[i], pares[j]);
                 if (distancia < menorDistancia){
                     menorDistancia = distancia;
-                    parMaisProximo = new Integer[]{i, j};
                 }
             }
         }
