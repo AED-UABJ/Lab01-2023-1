@@ -9,7 +9,7 @@ public class App {
         return -1;
     }
 
-    public static Integer parMaisProximo(Integer[][] pares){
+    public static float parMaisProximo(Integer[][] pares){
         return 1;
     }
 }
